@@ -1,11 +1,14 @@
 const Footer = () => {
-    return (
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-column">
-              <h3>GREEN BIT</h3>
-            </div>
+  return (
+    <footer className="footer border-t-2 border-green">
+      <div className="container">
+        <div className="footer-content">
+          <div className="footer-column">
+            <h3 className="text-2xl font-bold">
+              <span className="text-green">GREEN</span>
+              <span className="text-white"> BIT</span>
+            </h3>
+          </div>
             
             <div className="footer-column">
               <h4>Pages</h4>
@@ -43,13 +46,12 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          
-          <div className="footer-bottom">
-            <p>© {new Date().getFullYear()} Green Bit. All rights reserved.</p>
-          </div>
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} Green Bit. All rights reserved.</p>
         </div>
-      </footer>
-    );
-  };
-  
-  export default Footer; // Make sure this export is present
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

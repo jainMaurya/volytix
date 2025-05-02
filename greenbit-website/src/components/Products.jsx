@@ -10,11 +10,13 @@ const Products = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-           <div className='text-center'>
-          <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>OUR PRODUCTS</h1>
+          <div className='text-center'>
+            <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>
+              <span className="text-white">OUR</span>{" "}
+              <span className="text-green">PRODUCTS</span>
+            </h1>
           </div>
-          
-            <img src="/Productimg.png" alt="Productimg" />
+          <img src="/Productimg.png" alt="Productimg" />
         </motion.div>
       </div>
     </div>

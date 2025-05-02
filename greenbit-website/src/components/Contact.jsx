@@ -11,7 +11,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
         >
           <div className='flex flex-row justify-center items-center'>
-          <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>CONTACT US</h1>
+            <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>
+              <span className="text-green">CONTACT</span>{" "}
+              <span className="text-white">US</span>
+            </h1>
           </div>
           <div className="contact-grid">
             <div className="contact-info">
