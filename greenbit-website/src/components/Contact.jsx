@@ -19,17 +19,26 @@ const Contact = () => {
           <div className="contact-grid">
             <div className="contact-info">
               <div className="info-item">
+                <div className='flex flex-row gap-3'>
+                <img src="Email.png" alt="Email" className='w-8 h-8' />
                 <h3>E-Mail</h3>
+                </div>
                 <p>1234@gmail.com</p>
               </div>
               
               <div className="info-item">
+                <div className='flex flex-row gap-3'>
+                <img src="VisitUs.png" alt="Visit" className='w-8 h-8' />
                 <h3>Visit Us</h3>
+                </div>
                 <p>123, street India</p>
               </div>
               
               <div className="info-item">
+                <div className='flex flex-row gap-3'>
+                <img src="Support.png" alt="Support" className='w-8 h-8' />
                 <h3>Get Support</h3>
+                </div>
                 <p>Chat with us</p>
               </div>
             </div>

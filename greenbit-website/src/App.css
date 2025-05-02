@@ -21,7 +21,7 @@
 
 /* Hero Specific Styles */
 .hero h1 {
-  font-size: 48px;
+  
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -32,9 +32,10 @@
 }
 
 .hero h2 {
-  font-size: 36px;
+  
   margin-bottom: 15px;
   font-weight: 600;
+  
 }
 
 .hero h2 span {
@@ -79,16 +80,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--dark-color);
+  /* background-color: var(--dark-color); */
   box-shadow: 0 2px 10px rgba(0, 166, 81, 0.2);
   z-index: 1000;
   transition: all 0.3s ease;
   border-bottom: 1px solid var(--border-color);
 }
 
-.header.scrolled {
-  background-color: var(--dark-color);
-}
 
 .header .container {
   display: flex;
@@ -103,7 +101,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  /* background-color: rgba(0, 0, 0, 0.9); */
   z-index: 1000;
   transition: all 0.3s ease;
   padding: 15px 0;
@@ -240,17 +238,22 @@ nav ul li button.active::after {
   background: var(--dark-color);
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 100px;
   text-align: center;
+  margin: 0%;
+ 
 }
 
 .hero-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0;
+ display: inline;
+  padding: 0px 20px;
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--light-color);
@@ -435,8 +438,8 @@ nav ul li button.active::after {
 .contact-section {
   padding: 100px 0;
   background-color: var(--dark-color);
-  border-bottom: 2px solid var(--primary-color);
-  border-top: 1px solid var(--border-color);
+  border-bottom: 0.5px solid var(--primary-color);
+  border-top: 0.5px solid var(--border-color);
 }
 
 .contact-section h1 {
@@ -565,7 +568,7 @@ nav ul li button.active::after {
   background-color: var(--dark-color);
   color: var(--light-color);
   padding: 60px 0 20px;
-  border-top: 1px solid var(--border-color);
+  border-top: 0.25px solid var(--border-color);
 }
 
 .footer-content {
@@ -627,6 +630,15 @@ nav ul li button.active::after {
   
   .hero h1 {
     font-size: 36px;
+    padding-top: 130px;
+    
+  }
+  .earth {
+    
+    height: 100%;
+    
+    padding-top: 100px;
+    margin-top: 70px;
   }
   
   .hero h2 {
@@ -648,6 +660,7 @@ nav ul li button.active::after {
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
 /* Animation Styles */
