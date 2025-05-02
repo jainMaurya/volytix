@@ -10,11 +10,15 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h1>
-            <span className="text-green">ABOUT</span>{" "}
+          <div className='flex flex-row justify-center items-center'>
+          <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>
+            <span className="text-green ">ABOUT</span>{" "}
             <span className="text-white">US</span>
           </h1>
-          <p>
+          </div>
+          <div className='flex flex-row'>
+          <div className='w-3/4 text-right p-6'>
+          <p className=' text-right'>
             Greenbit is a European energy company dedicated to sustainability and reducing fossil fuel 
             dependence by offering renewable energy solutions. Its core product, HVO100—a renewable 
             biodiesel made from waste-based vegetable fats—is fully compatible with existing diesel 
@@ -22,6 +26,12 @@ const About = () => {
             is committed to becoming fossil-free by 2030 and is expanding its network of automated 
             fuel stations.
           </p>
+          </div>
+          <div className='w-1/4'>
+            <img src="/About.png" alt="About-img" />
+          </div>
+          </div>
+
         </motion.div>
       </div>
     </div>

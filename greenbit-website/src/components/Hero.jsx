@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'; // Add this import at the top
+import { motion } from 'framer-motion'; 
+
 
 const Hero = ({ scrollToSection }) => {
   return (
@@ -10,16 +11,22 @@ const Hero = ({ scrollToSection }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <div className='flex flex-row'>
+            <div className='z-10'>
+          <img src="/Mainimg.png" alt="Main" />
+          </div>
+             <div className='z-20 flex flex-col justify-center '>
           <h1>
             <span className="text-green">Powering</span>{" "}
             <span className="text-white">Up On Your</span>{" "}
             <span className="text-green">Grids</span>
           </h1>
           <h2>
-            <span className="text-green">GREEN</span>{" "}
-            <span className="text-white">BIT</span>
+            <span className="text-white text-2xl">GREEN</span>{" "}
+            <span className="text-white text-2xl">BIT</span>
           </h2>
           <p>Over 18000 Campus Points Nationwide</p>
+         
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -27,10 +34,16 @@ const Hero = ({ scrollToSection }) => {
           >
             Explore Our Products
           </motion.button>
-        </motion.div>
-      </div>
-    </section>
+          </div>
+          </div>
+         </motion.div>
+        
+        </div>
+        
+      
+     
+      </section>
   );
 };
 
-export default Hero; // Make sure this export is present
+export default Hero; 

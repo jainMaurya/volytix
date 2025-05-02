@@ -10,8 +10,9 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h1>CONTACT US</h1>
-          
+          <div className='flex flex-row justify-center items-center'>
+          <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>CONTACT US</h1>
+          </div>
           <div className="contact-grid">
             <div className="contact-info">
               <div className="info-item">

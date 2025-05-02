@@ -7,7 +7,7 @@
   --text-dark: #000000;     /* Black text for contrast */
   --background-color: #000000; /* Black background */
   --card-color: #121212;    /* Slightly lighter black for cards */
-  --border-color: #00A651;  /* Green borders */
+  
 }
 
 /* Text Color Classes */
@@ -311,7 +311,7 @@ nav ul li button.active::after {
   max-width: 800px;
   margin: 0 auto;
   color: var(--light-color);
-  text-align: center;
+  text-align: left;
 }
 
 /* Products Section */
@@ -438,7 +438,7 @@ nav ul li button.active::after {
 }
 
 .contact-info {
-  background-color: var(--card-color);
+ 
   padding: 30px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
@@ -478,9 +478,10 @@ nav ul li button.active::after {
 
 .form-group label {
   display: block;
+  opacity: 0.6;
   margin-bottom: 8px;
   font-size: 16px;
-  color: var(--primary-color);
+  color: white;
 }
 
 .form-group input,
@@ -488,8 +489,8 @@ nav ul li button.active::after {
   width: 100%;
   padding: 12px;
   background-color: var(--dark-color);
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border: 1px solid white;
+  border-radius: 15px;
   font-size: 16px;
   color: var(--light-color);
 }
@@ -499,17 +500,20 @@ nav ul li button.active::after {
 }
 
 .contact-form button {
-  background-color: var(--primary-color);
-  color: var(--text-dark);
-  border: none;
+  background-color: #07F09B;
+  color: #213122;
+  border-right: white solid 2px;
+
+  border-bottom: white solid 2px;
   padding: 12px 30px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 35px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 20px;
   font-weight: 600;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .contact-form button:hover {
