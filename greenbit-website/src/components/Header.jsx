@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 const Header = ({ scrollToSection, activeSection }) => {
   const [scrolled, setScrolled] = useState(false);
 
+  
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -13,7 +15,7 @@ const Header = ({ scrollToSection, activeSection }) => {
   }, []);
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${scrolled ? 'scrolled' : ''}`} style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}>
       <div className="container">
         <motion.div 
           className="logo"
