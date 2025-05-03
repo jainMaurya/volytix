@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
 
 :root {
-  --primary-color: #07F09B; /* Main green color */
-  --secondary-color: #07F09B; /* Darker green */
-  --dark-color: #000000;    /* Pure black */
-  --light-color: #FFFFFF;   /* Pure white */
-  --text-color: #FFFFFF;    /* White text by default */
-  --text-dark: #000000;     /* Black text for contrast */
-  --background-color: #000000; /* Black background */
-  --card-color: #121212;    /* Slightly lighter black for cards */
+  --primary-color: #07F09B;
+  --secondary-color: #07F09B; 
+  --dark-color: #000000;  
+  --light-color: #FFFFFF;  
+  --text-color: #FFFFFF;   
+  --text-dark: #000000;     
+  --background-color: #000000; 
+  --card-color: #121212;    
   
 }
 

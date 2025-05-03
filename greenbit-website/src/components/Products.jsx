@@ -11,7 +11,7 @@ const Products = () => {
           transition={{ duration: 0.8 }}
         >
           <div className='text-center'>
-            <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>
+            <h1 >
               <span className="text-white">OUR</span>{" "}
               <span className="text-green">PRODUCTS</span>
             </h1>

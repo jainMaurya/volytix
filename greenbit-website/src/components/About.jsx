@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+
 const About = () => {
   return (
     <div className="about-section">
@@ -10,12 +11,16 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className='flex flex-row justify-center items-center'>
-          <h1 className='border-b-4 border-[#90EDB5] pb-1 inline-block items-center'>
-            <span className="text-green ">ABOUT</span>{" "}
-            <span className="text-white">US</span>
-          </h1>
-          </div>
+         <div className='flex flex-col justify-center items-center'>
+  <h1 className='pb-0 leading-none text-5xl'>
+    <span className="text-[#07F09B]">ABOUT</span>{" "}
+    <span className="text-white ">US</span>
+  </h1>
+</div>
+
+ 
+
+
           <div className='flex flex-col-reverse md:flex-row items-center'>
           <div className='m-0 pt-14  md:w-3/5 md:p-10 md:mr-5'>
           <p >
