@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
 :root {
   --primary-color: #07F09B; /* Main green color */
   --secondary-color: #07F09B; /* Darker green */
@@ -245,9 +247,9 @@ nav ul li button.active::after {
 }
 
 .hero-content {
-  max-width: 800px;
+  
   margin: 0;
- display: inline;
+ display: inline-block;
   padding: 0px 20px;
   text-align: center;
 }
@@ -314,7 +316,8 @@ nav ul li button.active::after {
   max-width: 800px;
   margin: 0 auto;
   color: var(--light-color);
-  text-align: left;
+  text-align:justify;
+
 }
 
 /* Products Section */
@@ -544,19 +547,20 @@ nav ul li button.active::after {
 
 .contact-form button {
   background-color: #07F09B;
-  color: #213122;
+  color: #1f2e20;
   border-right: white solid 2px;
-
+  font-family: 'DM Serif Text';
   border-bottom: white solid 2px;
-  padding: 12px 30px;
-  font-size: 16px;
+  padding: 3px 3px;
+  font-size: 25px;
   border-radius: 35px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 20px;
-  font-weight: 600;
+  font-weight: 500px;
   text-transform: uppercase;
   width: 100%;
+  letter-spacing: 2px;
 }
 
 .contact-form button:hover {
@@ -646,9 +650,20 @@ nav ul li button.active::after {
   }
   
   .about-section, .products-section, .contact-section {
-    padding: 60px 0;
+    padding: 50px 0;
   }
-  
+  .about-section{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0%;
+  }
+  .about-section img {
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    padding-right: 0%;
+  }
   .product-card {
     padding: 20px;
   }

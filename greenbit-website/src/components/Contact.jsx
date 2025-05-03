@@ -21,7 +21,7 @@ const Contact = () => {
               <div className="info-item">
                 <div className='flex flex-row gap-3'>
                 <img src="Email.png" alt="Email" className='w-8 h-8' />
-                <h3>E-Mail</h3>
+                <h3 className='text-3xl'>E-Mail</h3>
                 </div>
                 <p>1234@gmail.com</p>
               </div>
@@ -29,7 +29,7 @@ const Contact = () => {
               <div className="info-item">
                 <div className='flex flex-row gap-3'>
                 <img src="VisitUs.png" alt="Visit" className='w-8 h-8' />
-                <h3>Visit Us</h3>
+                <h3 className='text-3xl'> Visit Us</h3>
                 </div>
                 <p>123, street India</p>
               </div>
@@ -37,7 +37,7 @@ const Contact = () => {
               <div className="info-item">
                 <div className='flex flex-row gap-3'>
                 <img src="Support.png" alt="Support" className='w-8 h-8' />
-                <h3>Get Support</h3>
+                <h3 className='text-3xl'>Get Support</h3>
                 </div>
                 <p>Chat with us</p>
               </div>
@@ -78,6 +78,7 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  
                 >
                   Submit
                 </motion.button>
