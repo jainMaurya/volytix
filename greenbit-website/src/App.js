@@ -19,24 +19,33 @@ function App() {
   };
 
   useEffect(() => {
+    let timeoutId;
+
     const handleScroll = () => {
-      const sections = ['home', 'about', 'products', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const sections = ['home', 'about', 'products', 'contact'];
+        const scrollPosition = window.scrollY + 100;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const offsetTop = element.offsetTop;
+            const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+            if (
+              scrollPosition >= offsetTop &&
+              scrollPosition < offsetTop + offsetHeight
+            ) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
-      }
+      }, 100); // Debounce by 100ms
     };
 
+    handleScroll(); // Trigger once on mount
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -44,25 +53,25 @@ function App() {
   return (
     <div className="app">
       <Header scrollToSection={scrollToSection} activeSection={activeSection} />
-      
+
       <main>
-        <section id="home">
+        <section id="home" aria-label="Home Section">
           <Hero scrollToSection={scrollToSection} />
         </section>
-        
-        <section id="about">
+
+        <section id="about" aria-label="About Section">
           <About />
         </section>
-        
-        <section id="products">
+
+        <section id="products" aria-label="Products Section">
           <Products />
         </section>
-        
-        <section id="contact">
+
+        <section id="contact" aria-label="Contact Section">
           <Contact />
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
