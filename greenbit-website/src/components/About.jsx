@@ -46,7 +46,7 @@ const About = () => {
           </h1>
         </motion.div>
 
-        <div className="flex flex-col-reverse md:flex-row items-center mt-10">
+        <div className="flex flex-col-reverse justify-center w-full md:flex-row items-center mt-10">
           {/* Text Animation */}
           <motion.div
             initial="hidden"
@@ -55,7 +55,7 @@ const About = () => {
             variants={textVariants}
             className="md:w-3/5 md:pr-10 pt-10 md:pt-0"
           >
-            <p>
+            <p >
               Greenbit is a European energy company dedicated to sustainability and reducing fossil fuel 
               dependence by offering renewable energy solutions. Its core product, HVO100—a renewable 
               biodiesel made from waste-based vegetable fats—is fully compatible with existing diesel 
@@ -65,16 +65,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Image Animation */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={imageVariants}
-            className="w-3/4 md:w-1/4 mb-10 md:mb-0"
-          >
-            <img src="/About.png" alt="About-img" />
-          </motion.div>
+         
         </div>
       </div>
     </div>
