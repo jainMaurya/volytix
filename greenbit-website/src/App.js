@@ -18,6 +18,8 @@ function App() {
     }
   };
 
+  
+
   useEffect(() => {
     let timeoutId;
 
@@ -72,7 +74,7 @@ function App() {
         </section>
       </main>
 
-      <Footer />
+      <Footer scrollToSection={scrollToSection} />
     </div>
   );
 }
