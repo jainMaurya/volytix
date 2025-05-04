@@ -427,6 +427,7 @@ nav ul li button.active::after {
   color: #FFFFFF;
   padding: 80px 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
 .contact-content {
@@ -446,7 +447,7 @@ nav ul li button.active::after {
   font-family: 'Dhyana', sans-serif;
   font-size: 48px;
   font-weight: 700;
-  color: #07F09B;
+  
   margin-bottom: 40px;
 }
 
@@ -489,6 +490,9 @@ nav ul li button.active::after {
   border-radius: 12px;
   padding: 40px;
   box-shadow: 0 10px 30px rgba(7, 240, 155, 0.1);
+  border-right: 2px solid #444444;
+  border-bottom: 2px solid #444444;
+  max-height: 550px;
 }
 
 .form-row {
@@ -506,7 +510,7 @@ nav ul li button.active::after {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .form-group input,
@@ -530,24 +534,29 @@ nav ul li button.active::after {
 }
 
 .submit-button {
-  background-color: #07F09B;
-  color: #000000;
-  border: none;
+  background-color: #015033;
+  color: white;
+  border-right: rgba(255, 255, 255, 0.758) solid 2px;
+  border-bottom: rgba(255, 255, 255, 0.758) solid 2px ;
   padding: 14px 28px;
   font-size: 16px;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  width: 100%;
+  width: 40%;
   font-family: 'DM Serif Text', serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 30px;
   transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .submit-button:hover {
-  background-color: #05D084;
+  scale: 1.05;
+  background-color: #0f7952;
 }
 
 /* Responsive adjustments */

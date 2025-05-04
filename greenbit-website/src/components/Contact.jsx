@@ -12,10 +12,11 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="talk-section"
         >
-          <h1 className="talk-heading">Let's talk</h1>
+          <span className="talk-heading">Let's </span>
+          <span className="talk-heading text-[#07F09B] ">Talk </span>
           <div className="talk-points">
-            <p className="talk-subheading">Talk to our team today to:</p>
-            <ul className="benefits-list">
+            <p className="talk-subheading pt-10">Talk to our team today to:</p>
+            <ul className="benefits-list pt-10">
               <li>Understand how our product may fit in your video needs</li>
               <li>Discover the capabilities and answers your questions</li>
               <li>Get a customized quote for your business</li>
@@ -39,7 +40,7 @@ const Contact = () => {
                   type="text" 
                   id="firstName" 
                   className="form-input"
-                  placeholder="Enter your first name"
+                 
                 />
               </div>
               <div className="form-group">
@@ -48,7 +49,7 @@ const Contact = () => {
                   type="text" 
                   id="lastName" 
                   className="form-input"
-                  placeholder="Enter your last name"
+                  
                 />
               </div>
             </div>
@@ -60,7 +61,7 @@ const Contact = () => {
                   type="email" 
                   id="email" 
                   className="form-input"
-                  placeholder="Enter your email"
+                  
                 />
               </div>
               <div className="form-group">
@@ -69,7 +70,7 @@ const Contact = () => {
                   type="tel" 
                   id="phone" 
                   className="form-input"
-                  placeholder="Enter your phone number"
+                  
                 />
               </div>
             </div>
@@ -80,7 +81,7 @@ const Contact = () => {
                 id="message" 
                 rows="4" 
                 className="form-textarea"
-                placeholder="Type your message here..."
+               
               ></textarea>
             </div>
 
@@ -88,7 +89,7 @@ const Contact = () => {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="submit-button"
+              className="submit-button text-[#015033] w-20"
             >
               Send
             </motion.button>
