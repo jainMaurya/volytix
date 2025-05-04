@@ -492,7 +492,7 @@ nav ul li button.active::after {
   box-shadow: 0 10px 30px rgba(7, 240, 155, 0.1);
   border-right: 2px solid #444444;
   border-bottom: 2px solid #444444;
-  max-height: 550px;
+  
 }
 
 .form-row {
