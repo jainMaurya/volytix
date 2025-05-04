@@ -44,7 +44,7 @@ const Products = () => {
           variants={imageVariants}
           className="flex justify-center"
         >
-          <img src="/Productimg.png" alt="Productimg" className="max-w-full" />
+          <img src="/Productimg.png" alt="Productimg" className="w-3/4 max-h-[400px] block" />
         </motion.div>
       </div>
     </div>
