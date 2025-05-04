@@ -20,7 +20,7 @@ const Footer = ({ scrollToSection }) => {
             <h4>Pages</h4>
             <ul>
               <li onClick={() => scrollToSection('home')} className="cursor-pointer hover:underline">Home</li>
-              <li onClick={() => scrollToSection('about')} className="cursor-pointer hover:underline">About</li>
+              <li onClick={() => scrollToSection('about')} className="cursor-pointer hover:underline">About Us</li>
               <li onClick={() => scrollToSection('products')} className="cursor-pointer hover:underline">Products</li>
               <li onClick={() => scrollToSection('contact')} className="cursor-pointer hover:underline">Contact Us</li>
             </ul>

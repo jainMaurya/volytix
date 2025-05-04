@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -10,46 +10,50 @@ import './App.css';
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
+  const sectionRefs = {
+    home: useRef(null),
+    about: useRef(null),
+    products: useRef(null),
+    contact: useRef(null),
+  };
+
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
+    const element = sectionRefs[sectionId].current;
+    if (element) {
+      const headerOffset = window.innerWidth < 768 ? 120 : 80;
+      const y = element.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
-  
-
   useEffect(() => {
-    let timeoutId;
-
-    const handleScroll = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        const sections = ['home', 'about', 'products', 'contact'];
-        const scrollPosition = window.scrollY + 100;
-
-        for (const section of sections) {
-          const element = document.getElementById(section);
-          if (element) {
-            const offsetTop = element.offsetTop;
-            const offsetHeight = element.offsetHeight;
-
-            if (
-              scrollPosition >= offsetTop &&
-              scrollPosition < offsetTop + offsetHeight
-            ) {
-              setActiveSection(section);
-              break;
-            }
-          }
-        }
-      }, 100); // Debounce by 100ms
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0,
     };
 
-    handleScroll(); // Trigger once on mount
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setActiveSection(sectionId);
+        }
+      });
+    }, observerOptions);
+
+    Object.values(sectionRefs).forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      Object.values(sectionRefs).forEach((ref) => {
+        if (ref.current) observer.unobserve(ref.current);
+      });
+    };
   }, []);
 
   return (
@@ -57,19 +61,19 @@ function App() {
       <Header scrollToSection={scrollToSection} activeSection={activeSection} />
 
       <main>
-        <section id="home" aria-label="Home Section">
+        <section id="home" ref={sectionRefs.home} aria-label="Home Section">
           <Hero scrollToSection={scrollToSection} />
         </section>
 
-        <section id="about" aria-label="About Section">
+        <section id="about" ref={sectionRefs.about} aria-label="About Section">
           <About />
         </section>
 
-        <section id="products" aria-label="Products Section">
+        <section id="products" ref={sectionRefs.products} aria-label="Products Section">
           <Products />
         </section>
 
-        <section id="contact" aria-label="Contact Section">
+        <section id="contact" ref={sectionRefs.contact} aria-label="Contact Section">
           <Contact />
         </section>
       </main>
